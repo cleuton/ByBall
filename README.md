@@ -6,7 +6,7 @@ This is the complete source code of "Bola No Quintal" game (Backyard ball). It's
 # Book
 This game was based on my book: 
 [**Manual do Indie Game Developer**](https://www.lcm.com.br/site/#/livros/detalhesLivro/manual-do-indie-game-developer---versao-android-e-ios.html).
-![alt text](https://raw.githubusercontent.com/cleutonsampaio/ByBall/master/./manual-indie-game-dev.jpg)
+![alt text](https://github.com/cleuton/ByBall/blob/master/manual-indie-game-dev.jpg)
 
 
 # Docs
