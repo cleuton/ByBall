@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Parte do livro "Manual do Indie Gamer", de Cleuton Sampaio, 
+ * doravante denominado "O Autor".
+ * Este codigo é distribuído sob a licença Apache 2.0, cujo texto pode ser lido em:
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0.html
+ * 
+ * Se você for utilizar este código em seus produtos, por favor mencione a autoria
+ * original, citando o livro e o nome do Autor.
+ *
+ * Como este material é parte de um Game, criado pelo Autor, você não pode criar trabalhos
+ * derivados, como games, sem expressa autorização do autor. Você não pode publicar este game 
+ * ou mesmo melhorá-lo sem autorização do autor, embora possa utilizar o código-fonte para
+ * criar games diferentes.
+ *
+ * O código  é disponibilizado "AS IS", e não há nenhum compromisso de suporte ou
+ * garantia por parte do Autor.
+ * 
+ */
+ -->
+<gameModel 
+    xmlns="http://com.obomprogramador.game/modeloGame" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://com.obomprogramador.game/modeloGame modelogame.xsd ">
+  <cena>
+    <!-- grupo ao qual pertence -->
+    <grupo>2</grupo>
+    <!-- média esperada por cena neste grupo -->
+    <media>15.0</media>        
+    <!-- Cena única -->
+    <!-- 
+    Você pode colocar todas as cenas em um único arquivo.
+    Eu preferi separar, pois assim fico com arquivos menores
+    e mais fáceis de editar.
+     -->
+    <numero>6</numero>      
+    <fps>30.0</fps>
+    <texturaFundo>cenario2.png</texturaFundo>
+    <frustum>
+      <camera>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>7.0</z>
+      </camera>
+      <cima>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </cima>
+      <direcao>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>-5.0</z>
+      </direcao>
+      <perto>1.0</perto>
+      <longe>10.0</longe>
+    </frustum>
+    <box2d>
+      <gravidade>-10.0</gravidade>
+      <sleep>true</sleep>
+      <velocityInterations>6</velocityInterations>
+      <positionInterations>2</positionInterations>
+      <proporcaoMetroTela>7.0</proporcaoMetroTela>
+    </box2d>
+    <!-- vamos introduzir um tempo limite em segundos para completar tudo -->
+    <parada>false</parada>
+    <limitesegundos>74</limitesegundos>
+    <!-- Retorno NPC > 0 significa que haverá penalidade para NPCs acertados
+    	 fora de ordem. Neste caso, o "retornonpc" é a quantidade de vezes
+    	 que o jogador acerta um NPC fora da ordem, antes de retornar um NPC
+    	 já derrubado 
+          -->
+    <retornonpc>0</retornonpc>
+    
+    <!-- Coleção de Game Objects -->
+        
+    <objetos>
+        <objeto>
+			<!-- Bola  -->
+		    <id>1</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>1</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: 
+		    	Objetos com ordem menor devem ser derrubados antes
+		    -->
+		    <ordem>0</ordem>
+		    <tipo>2</tipo>
+			<forma>1</forma>
+		    <centro>
+		    	<x>-2</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>5</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>
+		    <altura>0.5</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.5</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>bolafutebol.png</arquivoTextura>
+		    <densidade>3.0</densidade>
+		    <atrito>0.5</atrito>
+		    <coefRetribuicao>0.2</coefRetribuicao>
+		</objeto>
+        <objeto>
+			<!-- Chão  -->
+		    <id>2</id>
+		    <visivel>false</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>0.0</x>
+		        <y>0.0</y>
+		    </centro>
+		    <alinhar>1</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>
+		    <altura>0.1</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>10.0</largura>
+		    <esticarLargura>true</esticarLargura>
+		    <arquivoTextura></arquivoTextura>
+		    <densidade>10.0</densidade>
+		    <atrito>0.5</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>
+		<objeto>
+			<!-- Teto  -->
+		    <id>3</id>
+		    <visivel>false</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>0.0</x>
+		        <y>0.0</y>
+		    </centro>
+		    <alinhar>4</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>0.1</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>10.0</largura>
+		    <esticarLargura>true</esticarLargura>
+		    <arquivoTextura></arquivoTextura>
+		    <densidade>10.0</densidade>
+		    <atrito>0.5</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>
+        
+        <objeto>
+			<!-- Parede Esquerda  -->
+		    <id>4</id>
+		    <visivel>false</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>0.0</x>
+		        <y>0.0</y>
+		    </centro>
+		    <alinhar>2</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>10.0</altura>
+		    <esticarAltura>true</esticarAltura>
+		    <largura>0.1</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura></arquivoTextura>
+		    <densidade>10.0</densidade>
+		    <atrito>0.5</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>
+		<objeto>
+			<!-- Parede Direita  -->
+		    <id>5</id>
+		    <visivel>false</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>0.0</x>
+		        <y>0.0</y>
+		    </centro>
+		    <alinhar>3</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>10.0</altura>
+		    <esticarAltura>true</esticarAltura>
+		    <largura>0.1</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura></arquivoTextura>
+		    <densidade>10.0</densidade>
+		    <atrito>0.5</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>
+		
+		<!-- Outros objetos do nível -->
+		
+        <objeto>
+			<!-- Muro  -->
+		    <id>6</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>0</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>5</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>1.6</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.2</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>paredenivel1.png</arquivoTextura>
+		    <densidade>1.0</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>
+		
+
+        <objeto>
+			<!-- Lata  -->
+		    <id>7</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>2</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>2</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>1.8</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>6</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>8</sobre>		    
+		    <altura>0.4</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.15</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>lata.png</arquivoTextura>
+		    <densidade>2.0</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.2</coefRetribuicao>
+		</objeto>
+
+        
+        <objeto>
+			<!-- Suporte da lata  -->
+		    <id>8</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>1.8</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>5</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>1.9</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.1</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>suporte.png</arquivoTextura>
+		    <densidade>2.0</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.2</coefRetribuicao>
+		</objeto>
+		
+        <objeto>
+			<!-- Ketchup  -->
+		    <id>9</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>2</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>1</ordem>
+		    <tipo>2</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>0.4</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>6</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>10</sobre>		    
+		    <altura>0.55</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.2</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>ketchup.png</arquivoTextura>
+		    <densidade>1.0</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.4</coefRetribuicao>
+		</objeto>
+
+        
+        <objeto>
+			<!-- Suporte do Ketchup  -->
+		    <id>10</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>0.4</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>5</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>0.4</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.1</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>suporte.png</arquivoTextura>
+		    <densidade>1.0</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>
+        
+        <objeto>
+			<!-- Garrafa1  -->
+		    <id>11</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>2</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>2</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>1.3</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>6</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>12</sobre>		    
+		    <altura>0.5</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.15</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>garrafa1.png</arquivoTextura>
+		    <densidade>1.5</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.2</coefRetribuicao>
+		</objeto>
+
+
+        
+        <objeto>
+			<!-- Suporte da garrafa1  -->
+		    <id>12</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>1.3</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>5</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>2.1</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.1</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>suporte.png</arquivoTextura>
+		    <densidade>1.0</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>        
+
+        <objeto>
+			<!-- Mamadeira  -->
+		    <id>13</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>2</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>1</ordem>
+		    <tipo>2</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>2.2</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>6</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>14</sobre>		    
+		    <altura>0.40</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.13</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>mamadeira.png</arquivoTextura>
+		    <densidade>1.5</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.2</coefRetribuicao>
+		</objeto>
+
+
+        
+        <objeto>
+			<!-- Suporte da Mamadeira  -->
+		    <id>14</id>
+		    <visivel>true</visivel>
+		    <!-- vamos introduzir o tipo de gameobject: 1 = player, 2 = NPC, 3 = cenario -->
+		    <gameobject>3</gameobject>
+		    <!-- vamos introduzir ordem de derrubada: o id dos objetos que devem ser derrubados antes-->
+		    <ordem>0</ordem>
+		    <tipo>1</tipo>
+			<forma>2</forma>
+		    <centro>
+		    	<x>2.2</x>
+		        <y>0</y>
+		    </centro>
+		    <alinhar>5</alinhar>
+		    <!-- Vamos incluir o alinhamento 6 (base sobre outro objeto)
+		         e o campo sobre, que é o id do objeto que fica embaixo
+		     -->
+		    <sobre>0</sobre>		    
+		    <altura>0.4</altura>
+		    <esticarAltura>false</esticarAltura>
+		    <largura>0.1</largura>
+		    <esticarLargura>false</esticarLargura>
+		    <arquivoTextura>suporte.png</arquivoTextura>
+		    <densidade>1.0</densidade>
+		    <atrito>0.1</atrito>
+		    <coefRetribuicao>0.6</coefRetribuicao>
+		</objeto>        
+        
+        
+     </objetos>
+
+  </cena>
+</gameModel>

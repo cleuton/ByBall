@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="medias">
+        <!-- Níveis 1 a 5: 12 segundos -->
+        <item >12</item>
+        <item >12</item>
+        <item >12</item>
+        <item >12</item>
+        <item >12</item>
+        <!-- Níveis 6 a 10: 18 segundos -->
+        <item >18</item>
+        <item >18</item>
+        <item >18</item>
+        <item >18</item>
+        <item >18</item>
+        <!-- Níveis 11 a 15: 22 segundos -->
+        <item >22</item>
+        <item >22</item>
+        <item >22</item>
+        <item >22</item>
+        <item >22</item>
+        <!-- Níveis 16 a 20: 30 segundos -->
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>
+        <!-- Níveis 21 a 25: 15 segundos -->
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>
+        <item >30</item> 
+        <!-- Níveis 26 a 30: 30 segundos -->
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>
+        <item >30</item>                 
+    </integer-array>
+    
+</resources>

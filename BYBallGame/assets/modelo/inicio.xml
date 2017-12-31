@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Parte do livro "Manual do Indie Gamer", de Cleuton Sampaio, 
+ * doravante denominado "O Autor".
+ * Este codigo é distribuído sob a licença Apache 2.0, cujo texto pode ser lido em:
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0.html
+ * 
+ * Se você for utilizar este código em seus produtos, por favor mencione a autoria
+ * original, citando o livro e o nome do Autor.
+ *
+ * Como este material é parte de um Game, criado pelo Autor, você não pode criar trabalhos
+ * derivados, como games, sem expressa autorização do autor. Você não pode publicar este game 
+ * ou mesmo melhorá-lo sem autorização do autor, embora possa utilizar o código-fonte para
+ * criar games diferentes.
+ *
+ * O código  é disponibilizado "AS IS", e não há nenhum compromisso de suporte ou
+ * garantia por parte do Autor.
+ * 
+ */
+ -->
+<gameModel 
+    xmlns="http://com.obomprogramador.game/modeloGame" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://com.obomprogramador.game/modeloGame modelogame.xsd ">
+  <cena>
+    <!-- grupo ao qual pertence -->
+    <grupo>0</grupo>
+    <!-- média esperada por cena neste grupo -->
+    <media>0</media>
+    <!-- Cena inicial do game -->
+    <numero>0</numero>      
+    <fps>30.0</fps>
+    <texturaFundo>splash.png</texturaFundo>
+    <frustum>
+      <camera>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>7.0</z>
+      </camera>
+      <cima>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </cima>
+      <direcao>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>-5.0</z>
+      </direcao>
+      <perto>1.0</perto>
+      <longe>10.0</longe>
+    </frustum>
+    <box2d>
+      <gravidade>-10.0</gravidade>
+      <sleep>true</sleep>
+      <velocityInterations>6</velocityInterations>
+      <positionInterations>2</positionInterations>
+      <proporcaoMetroTela>7.0</proporcaoMetroTela>
+    </box2d>
+    <!-- vamos introduzir um tempo limite em segundos para completar tudo -->
+    <parada>true</parada>
+    <limitesegundos>0</limitesegundos>
+        <!-- Retorno NPC > 0 significa que haverá penalidade para NPCs acertados
+    	 fora de ordem. Neste caso, o "retornonpc" é a quantidade de vezes
+    	 que o jogador acerta um NPC fora da ordem, antes de retornar um NPC
+    	 já derrubado 
+          -->
+    <retornonpc>0</retornonpc>
+    
+    <!-- Coleção de Game Objects -->
+        
+    <objetos>
+
+    </objetos>
+
+  </cena>
+</gameModel>

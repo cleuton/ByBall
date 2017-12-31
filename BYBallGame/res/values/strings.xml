@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BYBall</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+	<string name="textoajuda">
+	    <![CDATA[
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=\"UTF-8\"/>
+	<meta name=\"viewport\" content=\"width=device-width\" />
+	
+    <style>
+		body {
+			font-family: Arial;
+			font-size: 1.5em;
+			color: black; 
+		}
+		.negrito {
+			font-weight: bold;
+		}
+
+	  a:link {
+		color:black;
+		font-weight: bold;
+		text-decoration:underline;
+		}
+		a:visited {
+		color:yellow;
+		text-decoration:none;
+		}
+		a:hover {
+		color:cyan;
+		text-decoration:underline;
+		}
+		a:active {
+		color:#00FF00;
+		text-decoration:underline;
+		background-color:#000000;
+	}
+
+	</style>    
+	
+</head>
+<body>
+<h3>Backyard Ball</h3>
+
+
+<h3>Version 2.0</h3>
+
+
+Backyard Ball is a game of skill, simple yet challenging. It is a mistake to think that this is a easy game. 
+It has levels that offer an experience of increasing difficulty, resulting in a very entertaining game.
+<br/>
+Backyard Ball uses the library <a href=\"http://box2d.org/\">\"Box2D\"</a>, created by Erin Catto. It also uses several free images from 
+<a href=\"http://openclipart.org/\">Open Clippart</a>.
+<h3>Objective</h3>
+The objective of the game is to knock down all the objects that are on the other side of the \"wall\". 
+These objects are mounted on poles or boards, which, depending on the level, can be mobile.
+<br/>
+There is a time constraint for each level:
+
+<dl>
+<dt class=\"negrito\">Levels 1 to 5</dt>
+<dd>60 seconds</dd>
+<dt class=\"negrito\">Levels 6 to 10</dt>
+<dd>70 seconds</dd>
+<dt class=\"negrito\">Levels 11 to 15</dt>
+<dd>60 seconds</dd>
+<dt class=\"negrito\">Levels 16 to 18</dt>
+<dd>60 seconds</dd>
+<dt class=\"negrito\">Levels 19 to 20</dt>
+<dd>90 seconds</dd>
+<dt class=\"negrito\">Levels 21 to 25</dt>
+<dd>60 seconds</dd>
+<dt class=\"negrito\">Levels 26 to 30</dt>
+<dd>90 seconds</dd>
+
+</dl>
+
+<h3>Gameplay</h3>
+The ball must be \"kicked\" by you, toward the other side of the wall. To \"kick\", touch on the ball and, 
+without lifting your finger, drag to where you want. When you release your finger, it will apply a force to the ball 
+and the ball will move.
+<br/>
+The direction in which you drag your finger away and length of the drag determine, respectively, the direction of the \"kick\" 
+and the force being applied to the ball. The further the drag, the greater the force.
+<br/>
+The game setting is surrounded by the four sides: ceiling, floor, wall right and left wall.
+<br/>
+There can be only one \"kick\" per move. Each play can end one of four ways:
+<ol>
+<li>It hit one of the targets (bottles, bottle, medicine bottle, glass, can, bottle of ketchup etc). 
+If the object falls, it will be considered a hit.</li>
+<li>Hit the ground. In this case, the ball is moved back to the starting position on the other side of the wall;</li>
+<li>Hit a target, but out of order (in some levels there is hitting order). 
+In this case, the ball will bounce back and the object will be restored;</li>
+<li>Could not get past the wall.</li>
+</ol>
+<br/><span class=\"negrito\">Tips</span>
+<ul>
+<li>Touch with the index finger tip, to get best result;</li>
+<li>Calculate the force being applied. Less force means more control;</li>
+<li>Make the ball bounce in other objects (walls, poles etc).</li>
+<li>If the ball gets stuck on the left side, in 1 second it will be released to you.</li>
+</ul>
+
+<h3>Levels</h3>
+Toplay a level, it must be released, what happens if the previous level was successfully completed.
+ Each level has an expected average. If you complete the level (dropping all objects) within the average, 
+receives a silver medal, which becomes the icon of the level where your time will be displayed.
+<br/>
+If you complete the level with a time less than the average, receives a gold medal. And if you finish with above average time, 
+receive a bronze medal.
+<br/>
+To unlock the next level, the average of their times in the previous level must be at least equal to the expected average.
+<br/><br/>
+<span class=\"negrito\">Expected averages by level</span><br/>
+<dl>
+<dt class=\"negrito\">Levels de 1 to 5</dt>
+<dd>12 seconds</dd>
+<dt class=\"negrito\">Levels de 6 to 10</dt>
+<dd>18 seconds</dd>
+<dt class=\"negrito\">Levels de 11 to 15</dt>
+<dd>22 seconds</dd>
+<dt class=\"negrito\">Levels de 16 to 20</dt>
+<dd>30 seconds</dd>
+<dt class=\"negrito\">Levels de 21 to 25</dt>
+<dd>30 seconds</dd>
+<dt class=\"negrito\">Levels de 26 to 30</dt>
+<dd>30 seconds</dd>
+
+</dl>
+<br/>
+<h3>Constraints</h3>
+There is a hitting order in some levels, which forces you to hit the targets in that sequence. From level 6 and beyond, you have to be careful to drop the objects in the expected order.
+<br/>
+The order appears in the upper left corner, just below the \"EXIT\" button. There is a order number and the objects appear to be hit in that order. 
+Levels of 6 to 10, you have to hit two objects in each order. In the levels beyond 6, the order is individual.
+<br/>
+If you hit an object out of its order, it will reappear and you can suffer a penalty. 
+In the levels of 11 onwards, every 3 times you hit an object out of order, another object will be reset. 
+For example, let\'s assume that you have dropped a soda can and then missed 3 times, in this case, the soda can appears again, delaying your game time.
+<br/>
+At levels 21 onwards, there is the concept of \"Forbidden Object\", which, if knocked down, makes you miss the level (a symbol with a red hand appears). The forbidden object is the last in the order list, inside a red oval and with a black band.
+<br/>
+<h3>Controls</h3>
+When you enter the game, you will see buttons with the level numbers. If the level is locked, a small padlock will appear below its number.
+<br/>
+If the level is open and has not been played yet, will appear in gray. If you it has already been played, your \"medal\" 
+(gold, silver or bronze) will be shown, and the shortest time you completed it. In both cases, you can tap the button and enter the level to play.
+<br/>
+There are three buttons in the home screen: \"help\", \"next\" and \"previous\". The \"next\" and \"previous\" buttons have two red arrows as icons
+that appear below the levels, and serve to show the next page of levels or return to previous page.
+<br/>
+Within each level, there is an \"EXIT\" button, which returns to the Home screen. 
+After completing the level, either by shooting down all the targets, or by timeout, a button will appear offering 
+the \"Replay\" level.
+If you successfully complete, appear two other buttons: 
+one to the next level and another to share the results. 
+You can share the results in various types of social networks and media, 
+such as: Google+, Facebook, Twitter, SMS, Gmail, email etc.. To share, you need to get on the Internet.
+<br/>
+<h3>Author</h3>
+<br/>Designed and programmed by: <span class=\"negrito\">Cleuton Sampaio</span>.
+<br/>
+It is offered to you by <a href=\"http://www.thecodebakers.org\" class=\"negrito\">The Code Bakers</a> and <a href=\"http://www.indiegamerbrasil.com\" class=\"negrito\">Indie Gamer Brasil</a>.
+<br/>
+Learn to make a game like this reading the book: \"<a href=\"http://www.indiegamerbrasil.com\" class=\"negrito\">Manual do Indie Game Developer</a>\", 
+published by: <a href=\"http://www.lcm.com.br\" class=\"negrito\">Ci&ecirc;ncia Moderna</a>.
+<br/>
+
+</body>
+</html>
+	    
+		]]>
+	</string>
+	<string name="eula">
+	    <![CDATA[
+	    Please: read all the text and mark the checkbox at the end. It will only appear one time per version of the game.
+	    \r\n
+End user license agreement:\r\n
+\r\n
+\r\nThe use of software "Backyard Ball" (THE SOFTWARE) is governed by the terms of this license, which is a
+implicit agreement between the person who will install and use the software (THE USER) and the person who developed the
+software (THE AUTHOR).
+\r\n
+\r\nIf you disagree with the terms of this license, please uninstall the software.
+\r\n
+\r\nIf you, the USER, proceed and use the SOFTWARE (subject of this license), you, the USER acknowledges and agrees to all 
+terms of this license.
+\r\n
+1) Recognition of copyright:
+\r\n
+\r\n(C) 2013 by Cleuton Sampaio de Melo Jr.
+\r\n
+\r\nBy using the SOFTWARE ("Backyard Ball") you, hereafter designated "THE USER", acknowledges the authorship and the resulting
+copyright by Cleuton Sampaio de Melo Jr, hereinafter designated "THE AUTHOR".
+\r\n
+If you do not agree to recognize these rights or any other terms of this license, you must uninstall
+software and not use it in any way.
+\r\n
+\r\n2)License terms:
+\r\n
+\r\nThrough this document, the USER received a personal and non transferable license to use the SOFTWARE, compound by 
+the software package containing the compiled code, and resources such as images, texts, sounds etc..
+\r\n
+\r\nThe use is limited by several constraints mentioned below. Violation of any of these restrictions implies
+immediate termination of this license.
+\r\n
+\r\n3) License Restrictions:
+\r\n
+\r\nTHE USER CAN NOT: Sell, distribute, rent or make available this software (and documentation) except when expressly authorized
+by THE AUTHOR. In case of an authorized transfer of this license, the person receiving the SOFTWARE must agree to
+the terms of this license.
+\r\n
+\r\nTHE USER CAN NOT: Disassemble the SOFTWARE package, substitute its components, and or use its components (in whole or part) 
+in other products. likewise, the USER can not use reverse engineering to try to get access to the source code.
+Also, the USER can not create derivatives of the SOFTWARE without the express permission of the AUTHOR, as well as
+can not change in any way the content of the SOFTWARE package, for example (but not limited to): add  new code or 
+unlock features. The USER can not change manually or by other software, any of the SOFTWARE package files.
+\r\n
+\r\nTHE USER CAN NOT: Change or remove this license or any documentation or pictures on the package SOFTWARE.
+\r\n
+
+\r\n4) Termination of License
+\r\n
+\r\nThe USER may terminate the license at any time by simply uninstalling and destroying any copies of the SOFTWARE 
+\r\nin his (or hers) possession. There is no obligation to refund any amount by the AUTHOR.
+\r\n
+\r\nTHE AUTHOR may terminate the license at any time, proved that the USER has violated these terms.
+\r\n
+\r\n5) Limited Warranty:
+\r\n
+\r\nThe SOFTWARE and documentation are distributed as they are ("AS IS"), without any guarantee of performance and applicability
+for any particular use.
+\r\n
+\r\nDespite AUTHOR\'s efforts to create a SOFTWARE that meets its purpose, the warranty against defects is excluded from this
+license. THE AUTHOR does not warrant that the software do not have defects or performance problems, especially due to
+large number of platforms on which the SOFTWARE may be executed.
+\r\n
+\r\nThe distribution of the SOFTWARE is done "on line" by GOOGLE PLAY, so any complaints about the unavailability
+and defects in the software package, caused by transfer, shall be made to the administration of GOOGLE PLAY.
+\r\n
+\r\nTHE AUTHOR provides contact information in their own product page on GOOGLE PLAY, so any contact should
+be done only by designated channels there.
+\r\n
+\r\nTHE AUTHOR is not obligated to develop new versions or updates of the SOFTWARE.
+\r\n
+\r\n6) Questions not covered in this license:
+\r\n
+\r\nIt is the jurisdiction of the forum of the municipality of Rio de Janeiro, State of Rio de Janeiro, Brazil, to resolve any questions not
+clarified by this license.
+\r\n  
+	    
+	    ]]>
+	</string>
+	<string name="concordo">I agree</string>
+	<string name="prosseguir">Proceed</string>
+	<string name="titulopontos">These are your best scores until now:\r\n</string>
+	<string name="nivel">Level</string>
+	<string name="sair">Back</string>
+	<string name="sharesubject">I beat the game in Backyard Ball</string>
+	<string name="sharetext">I beat the level: %1$d of the BackyardBall game in %2$d seconds!</string>
+	<string name="sharetitle">Share using</string>
+	<string name="app_id">636241249723568</string>
+	<string name="postfacebook">Post sent to facebook.</string>
+	<string name="postothers">Post sent to %1$s.</string>
+	<string name="posturl">http://indiegamerbrasil.com</string>
+	<string name="posterror">Could not post to %1$s. Verify network connection.</string>
+	<string name="postnonetwork">Can not post to %1$s. You must connect to Internet.</string>
+</resources>

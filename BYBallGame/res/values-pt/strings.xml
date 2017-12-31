@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BYBall</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+	<string name="textoajuda">
+	    <![CDATA[
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=\"UTF-8\"/>
+	<meta name=\"viewport\" content=\"width=device-width\" />
+	
+    <style>
+		body {
+			font-family: Arial;
+			font-size: 1.5em;
+			color: black; 
+		}
+		.negrito {
+			font-weight: bold;
+		}
+
+	  a:link {
+		color:black;
+		font-weight: bold;
+		text-decoration:underline;
+		}
+		a:visited {
+		color:yellow;
+		text-decoration:none;
+		}
+		a:hover {
+		color:cyan;
+		text-decoration:underline;
+		}
+		a:active {
+		color:#00FF00;
+		text-decoration:underline;
+		background-color:#000000;
+	}
+	</style>    
+	
+</head>
+<body>
+<h3>Bola No Quintal</h3>
+
+<h3>Vers&atilde;o 2.0</h3>
+
+Bola no quintal &eacute; um jogo de habilidade, simples, por&eacute;m desafiador. &Eacute; um erro pensar que se trata de um jogo \"f&aacute;cil\". 
+Seus niveis, em ordem de crescente dificuldade, resultando em um jogo muito divertido.
+
+<b>Bola no Quintal</b> usa a biblioteca <a href=\"http://box2d.org/\">\"Box2D\"</a>, criada por Erin Catto. E tamb&eacute;m usa
+v&aacute;rias imagens livres do <a href=\"http://openclipart.org/\">Open Clippart</a>.
+
+<h3>Objetivo</h3>
+O objetivo do jogo &eacute; derrubar todos os objetos que est&atilde;o do outro lado do \"muro\". Estes objetos est&atilde;o apoiados sobre 
+estacas ou t&aacute;buas, que, dependendo do nivel, podem ser m&oacute;veis. 
+<br/>
+H&aacute; uma restri&ccedil;&atilde;o de tempo para cada nivel: 
+<dl>
+<dt class=\"negrito\">Niveis de 1 a 5</dt>
+<dd>60 segundos</dd>
+<dt class=\"negrito\">Niveis de 6 a 10</dt>
+<dd>70 segundos</dd>
+<dt class=\"negrito\">Niveis de 11 a 15</dt>
+<dd>60 segundos</dd>
+<dt class=\"negrito\">Niveis de 16 a 18</dt>
+<dd>60 segundos</dd>
+<dt class=\"negrito\">Niveis de 19 a 20</dt>
+<dd>90 segundos</dd>
+<dt class=\"negrito\">Niveis de 21 a 25</dt>
+<dd>60 segundos</dd>
+<dt class=\"negrito\">Niveis de 26 a 30</dt>
+<dd>90 segundos</dd>
+
+</dl>
+
+<h3>Jogabilidade</h3>
+A bola deve ser \"chutada\" por voc&ecirc;, em dire&ccedil;&atilde;o ao lado esquerdo do muro. Para \"chutar\", toque sobre a bola e, sem levantar o dedo, arraste at&eacute; onde quiser. 
+Ao soltar o dedo, ser&aacute; aplicada uma for&ccedil;a &agrave; bola e esta se mover&aacute;.
+<br/>
+A dire&ccedil;&atilde;o para onde voc&ecirc; arrasta o dedo e a dist&acirc;ncia do arrasto determinar&atilde;o, respectivamente, a dire&ccedil;&atilde;o do \"chute\" e a for&ccedil;a a ser aplicada.
+Quanto mais longe for o arrasto, maior ser&aacute; a for&ccedil;a.
+<br/>
+O cen&aacute;rio de jogo &eacute; cercado pelos quatro lados: teto, ch&atilde;o, parede direita e parede esquerda. 
+<br/>
+S&oacute; pode haver um &uacute;nico \"chute\" por jogada. Cada jogada pode terminar de quatro maneiras:
+<ol>
+<li>Atingiu um dos alvos (garrafas, mamadeira, vidro de rem&eacute;dio, copo, lata, garrafa de Ketchup etc). Se o objeto cair, 
+ser&aacute; considerado um acerto.</li>
+<li>Atingiu o ch&atilde;o. Neste caso, a bola ser&aacute; jogada de volta &agrave; posi&ccedil;&atilde;o inicial, do outro lado do muro;</li>
+<li>Atingiu um alvo, por&eacute;m fora da ordem (em alguns niveis existe ordem de derrubada). Neste caso, a bola ser&aacute; devolvida
+e o objeto ser&aacute; reposto;</li>
+<li>N&atilde;o conseguiu passar pelo muro.</li>
+</ol>
+<br/><span class=\"negrito\">Dicas</span>
+<ul>
+<li>Toque com a ponta do dedo indicador, para ter melhor resultado;</li>
+<li>Calcule a for&ccedil;a a ser aplicada. Jogar de leve pode ser melhor, especialmente nos &uacute;ltimos n&iacute;veis!</li>
+<li>Use outros objetos para rebater a bola;</li>
+<li>Se a bola ficar presa no lado esquerdo, em 1 segundo ela ser&aacute; liberada para voc&ecirc;.</li>
+</ul>
+
+<h3>Niveis</h3>
+Para jogar um nivel, &eacute; preciso que esteja liberado, o que acontece se o n&iacute;vel anterior foi completado com sucesso.
+Cada nivel tem uma m&eacute;dia esperada. Se voc&ecirc; completa o nivel (derrubando todos os objetos) dentro da m&eacute;dia,
+recebe uma medalha de prata, que se torna o icone do nivel, onde seu tempo ser&aacute; exibido. 
+<br/>
+Se voc&ecirc; completar o nivel com tempo menor que o da m&eacute;dia, recebe uma medalha de ouro. E, se terminar com tempo acima da 
+m&eacute;dia, recebe medalha de bronze.
+<br/>
+<span class=\"negrito\">M&eacute;dias esperadas por grupo</span><br/>
+<dl>
+<dt class=\"negrito\">Niveis de 1 a 5</dt>
+<dd>12 segundos</dd>
+<dt class=\"negrito\">Niveis de 6 a 10</dt>
+<dd>18 segundos</dd>
+<dt class=\"negrito\">Niveis de 11 a 15</dt>
+<dd>22 segundos</dd>
+<dt class=\"negrito\">Niveis de 16 a 20</dt>
+<dd>30 segundos</dd>
+<dt class=\"negrito\">Niveis de 21 a 25</dt>
+<dd>30 segundos</dd>
+<dt class=\"negrito\">Niveis de 26 a 30</dt>
+<dd>30 segundos</dd>
+
+</dl>
+<br/>
+<h3>Restri&ccedil;&otilde;es</h3>
+Em alguns niveis, existe restri&ccedil;&atilde;o de ordem de derrubada dos alvos. A partir do nivel 6, voc&ecirc; tem que tomar cuidado para
+derrubar os objetos na ordem esperada. 
+<br/>
+A ordem aparece no canto superior esquerdo, logo abaixo do bot&atilde;o \"SAIR\". E &eacute; numerada. Ap&oacute;s o n&uacute;mero, aparecem os objetos
+que devem ser derrubados naquela ordem. Nos niveis de 6 a 10, a ordem &eacute; de dois em dois. Nos niveis seguintes, a ordem 
+&eacute; individual.
+<br/>
+Ao derrubar um objeto fora da ordem, ele ser&aacute; reposto e voc&ecirc; poder&aacute; sofrer uma penalidade. Nos niveis de 11 em diante, 
+a cada 3 vezes que voc&ecirc; acertar um objeto fora da ordem, um outro objeto ser&aacute; reposto. Por exemplo, vamos supor que 
+voc&ecirc; tenha derrubado uma lata e errou 3 vezes, ent&atilde;o a lata voltar&aacute;, atrasando seu tempo.
+<br/>
+Nos n&iacute;veis 21 em diante, existe o conceito de <b>"Objeto Proibido"</b>, o qual, se derrubado, faz com que voc&ecirc; perca o n&iacute;vel (um simbolo vermelho com uma m&atilde;o aparece). 
+O objeto proibido &eacute; o &uacute;ltimo da lista de ordem, dentro de um oval vermelho e com uma faixa preta.
+<br/>
+<h3>Controles</h3>
+Ao entrar no jogo, voc&ecirc; tem os bot&otilde;es com os niveis. Se o nivel estiver bloqueado, um pequeno cadeado aparecer&aacute; abaixo do
+seu n&uacute;mero. 
+<br/>
+Se o nivel estiver aberto e n&atilde;o tiver sido ainda jogado, aparecer&aacute; em cinza. Se j&aacute; tiver sido jogado, aparecer&aacute; a sua 
+\"medalha\" (ouro, prata ou bronze) e o menor tempo em que voc&ecirc; o completou. Nos dois casos, voc&ecirc; pode tocar o bot&atilde;o do
+nivel e entrar para jogar.
+<br/>
+Ainda na tela inicial, existem mais tr&ecirc;s bot&otilde;es: \"ajuda\", \"pr&oacute;ximo\" e \"anterior\". Os bot&otilde;es \"pr&oacute;ximo\" e \"anterior\" s&atilde;o 
+duas setas vermelhas, que aparecem logo abaixo dos niveis, e servem para mostrar o pr&oacute;ximo grupo de niveis ou voltar
+ao anterior.
+<br/>
+Dentro de cada nivel, h&aacute; um bot&atilde;o \"SAIR\", que retorna para a tela inicial. Ao completar o nivel, seja por derrubar todos
+os alvos, ou por tempo, aparecer&aacute; um bot&atilde;o oferecendo o \"Replay\" do n&iacute;vel.
+<br/>
+Se voc&ecirc; completar com sucesso, aparecer&atilde;o dois outros bot&otilde;es: um para o pr&oacute;ximo n&iacute;vel e outro para compartilhar os resultados. Voc&ecirc; pode compartilhar os resultados em 
+v&aacute;rios tipos de redes sociais e meios, como: Google+, Facebook, Twitter, Mensagens SMS, Gmail, email etc. Para compartilhar, &eacute; preciso entrar na Internet.
+<br/>
+<h3>Author</h3>
+<br/>Criado por: <span class=\"negrito\">Cleuton Sampaio</span>.
+<br/>
+Ele &eacute; oferecido a voc&ecirc; por <a href=\"http://www.thecodebakers.org\" class=\"negrito\">The Code Bakers</a> e 
+por <a href=\"http://www.indiegamerbrasil.com\" class=\"negrito\">Indie Gamer Brasil</a>.
+<br/>
+Aprenda a fazer um game como este lendo o livro: \"<a href=\"http://www.indiegamerbrasil.com\" class=\"negrito\">Manual do Indie Game Developer</a>\", 
+publicado pela editora: <a href=\"http://www.lcm.com.br\" class=\"negrito\">Ci&ecirc;ncia Moderna</a>.
+<br/>
+
+</body>
+</html>
+
+		]]>	    
+	    
+	</string>
+	
+	<string name="eula">
+	    <![CDATA[
+Por favor: leia até o final e marque a opção. Este texto somente aparecerá uma única vez por versão do jogo.
+\r\n	    
+	    \r\nLicença de uso do software:
+\r\n
+\r\nO uso do software "Bola no Quintal" (O SOFTWARE) está regulado pelos termos desta licença de uso do software, que representa um 
+acordo implícito entre a pessoa que vai instalar e utilizar o software (O USUÁRIO) e a pessoa que desenvolveu o 
+software (O AUTOR). 
+\r\n
+\r\nCaso não concorde com os termos desta licença, por favor desinstale o software.
+\r\n
+\r\nAo prosseguir e utilizar o SOFTWARE objeto desta licença, você, o USUÁRIO, reconhece e concorda com todos os termos desta
+licença.
+\r\n
+\r\n1) Reconhecimento de direitos reservados:
+\r\n
+\r\n(C) 2013 por Cleuton Sampaio de Melo Jr.
+\r\n
+\r\nAo utilizar o software "Bola no Quintal", você, doravante denominado USUÁRIO, reconhece a autoria e os consequentes 
+direitos autorais de Cleuton Sampaio de Melo Jr, doravante denominado AUTOR.
+\r\n
+\r\nCaso não concorde em reconhecer estes direitos ou com quaisquer outros termos desta licença, você deve desinstalar 
+o software e não utilizá-lo de forma alguma.
+\r\n
+\r\n2) Termos da licença:
+\r\n
+\r\nAtravés deste documento, o USUÁRIO recebeu uma licença pessoal e instransferível, de utilização do aplicativo citado no tópico 1, 
+composto pelo pacote de software, contendo código compilado, e os recursos, como imagens, textos, sons etc.
+\r\n
+\r\nA utilização é limitada por diversas restrições, citadas a seguir. A violação de qualquer uma destas restrições implica no 
+cancelamento imediato desta licença.
+\r\n
+\r\n3) Restrições da licença:
+\r\n
+\r\nO USUÁRIO NÃO PODE: Vender, distribuir, alugar ou disponibilizar este software (e sua documentação), exceto se autorizado 
+expressamente pelo AUTOR. Em caso de transferência de licença autorizada, a pessoa que receber o SOFTWARE deve concordar com
+os termos desta licença.
+\r\n
+\r\nO USUÁRIO NÃO PODE: Desmontar o executável, utilizando seus componentes (em todo ou parte) em outros produtos. Igualmente, 
+não pode utilizar recursos de engenharia reversa para tentar obter acesso ao código-fonte, seja por qual motivo for. 
+Igualmente, o USUÁRIO não pode criar produtos derivados do SOFTWARE sem a expressa autorização do AUTOR, assim como também 
+não pode alterar de forma alguma o conteúdo do pacote do SOFTWARE, seja para acrescentar código, desbloquear funções ou 
+qualquer tipo de alteração. O USUÁRIO não pode substituir, alterar e ou adicionar arquivos ao pacote do SOFTWARE.
+\r\n
+\r\nO USUÁRIO NÃO PODE: Alterar ou remover esta licença ou quaisquer documentações e imagens existentes no pacote do SOFTWARE.
+\r\n
+\r\n4) Término da licença:
+\r\n
+\r\nO USUÁRIO pode terminar a licença a qualquer momento, bastando apenas desinstalar e destruir quaisquer cópias do SOFTWARE que
+tenha em seu poder ou tenha transferido (sob autorização). Não há obrigação de devolução de qualquer quantia por parte do
+AUTOR.
+\r\n
+\r\nO AUTOR pode terminar a licença a qualquer momento, provado que o USUÁRIO violou estes termos.
+\r\n
+\r\n5) Garantia limitada:
+\r\n
+\r\nO SOFTWARE e sua documentação são distribuídos como estão ("AS IS"), sem qualquer garantia sobre desempenho e aplicabilidade
+para qualquer uso em particular. 
+\r\n
+\r\nApesar do AUTOR empenhar esforços para que o SOFTWARE atenda a seu propósito, a garantia contra defeitos está excluída desta
+licença. O AUTOR não garante que o software não possa apresentar defeitos ou problemas de desempenho, ainda mais devido ao
+grande número de plataformas nas quais o SOFTWARE pode ser executado. 
+\r\n
+\r\nA distribuição do SOFTWARE é feita de forma "on line" pelo GOOGLE PLAY, logo, quaisquer reclamações quanto a indisponibilidade
+e ou defeitos do pacote de software, causados por problemas de transferência, devem ser feitos à administração do GOOGLE PLAY.
+\r\n
+\r\nO AUTOR disponibiliza informações para contato na própria página do produto no GOOGLE PLAY, logo, quaisquer contato deve 
+ser feito exclusivamente pelos canais lá designados.
+\r\n
+\r\nO AUTOR, seus empregados e quaisquer pessoas envolvidas na criação e distribuição do SOFTWARE não poderão ser responsabilizados
+por danos diretos ou indiretos decorrentes do uso do SOFTWARE, como por exemplo (mas não limitados a): perda de lucros, perda
+de receita, perda de aparelho, perda de tempo, perda de dados ou outros problemas.
+\r\n
+\r\nO AUTOR não se compormete a desenvolver novas versões e ou atualizações do SOFTWARE.
+\r\n
+\r\n6) Questões não cobertas nesta licença:
+\r\n
+\r\nFica eleito o foro do município do Rio de Janeiro, estado do Rio de Janeiro, Brasil, para dirimir quaisquer dúvidas não 
+esclarecidas por esta licença.
+\r\n
+	    ]]>	
+	</string>
+	<string name="concordo">Eu concordo</string>
+	<string name="prosseguir">Prosseguir</string>
+	<string name="titulopontos">Estes são seus melhores tempos até agora:\r\n</string>
+	<string name="nivel">Nível</string>
+	<string name="sair">Voltar</string>
+	<string name="sharesubject">Venci no jogo Bola no Quintal</string>
+	<string name="sharetext">Eu venci o nível: %1$d do jogo Bola no Quintal em %2$d segundos!</string>
+	<string name="sharetitle">Compartilhar via</string>	
+	<string name="app_id">636241249723568</string>
+	<string name="postfacebook">Post enviado ao facebook.</string>
+	<string name="postothers">Post enviado para %1$s.</string>
+	<string name="posturl">http://indiegamerbrasil.com</string>
+	<string name="posterror">Não pude postar para %1$s. Verifique conexão de rede.</string>
+	<string name="postnonetwork">Não posso postar para: %1$s. Conecte-se à Internet.</string>
+</resources>

@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Parte do livro "Manual do Indie Gamer", de Cleuton Sampaio, 
+ * doravante denominado "O Autor".
+ * Este codigo é distribuído sob a licença Apache 2.0, cujo texto pode ser lido em:
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0.html
+ * 
+ * Se você for utilizar este código em seus produtos, por favor mencione a autoria
+ * original, citando o livro e o nome do Autor.
+ * 
+ * O código  é disponibilizado "AS IS", e não há nenhum compromisso de suporte ou
+ * garantia por parte do Autor.
+ * 
+ */
+ -->
+ <!-- 
+ 
+ Este arquivo serve para carregar texturas livres, que não são associadas a objetos do Box2D.
+ As coordenadas e tamanhos devem ser informados percentuais da diagonal da tela.
+ 
+ As posições são espaços criados na tela, para os quais serão calculados VOBs de vértices.
+ As texturas são as imagens, que serão carregadas nas possíveis posições, tanto automaticamente como
+ programaticamente.
+ 
+ A propriedade "clicavel" das texturas indica que deverá ser rastreado o clique do mouse sobre elas.
+ 
+  -->
+<mapaTela>
+    <posicoes>
+	    <posicao>
+	        <id>4</id>
+	        <!-- Espaço para o relógio -->
+	        <altura>30</altura>
+	        <largura>60</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>true</centralizarvertical>
+	        <centralizarhorizontal>true</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	       	    
+	    </posicao>	  
+    
+	    <posicao>
+	        <id>6</id>
+	        <!-- Espaço para o fundo da tela de avisos -->
+	        <altura>50</altura>
+	        <largura>80</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>true</centralizarvertical>
+	        <centralizarhorizontal>true</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    
+		<!-- Botões -->	   		      
+	    <posicao>
+	        <id>8</id>
+	        <!-- Espaço para o botão ajuda -->
+	        <altura>7</altura>
+	        <largura>16</largura>
+	        <topo>47</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>	  	   		   		      
+	    	    
+	    
+		<!-- Níveis -->
+		<posicao>
+	        <id>10</id>
+	        <!-- linha de níveis -->
+	        <altura>15</altura>
+	        <largura>15</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0.22</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>1</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.10</espaco>        
+	    </posicao>
+	    
+		<posicao>
+	        <id>20</id>
+	        <!-- Botão próximo -->
+	        <altura>7</altura>
+	        <largura>10</largura>
+	        <topo>47</topo>
+	        <esquerda>50</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>false</centragrupo>
+	        	        
+	    </posicao>
+		<posicao>
+	        <id>22</id>
+	        <!-- Botão anterior -->
+	        <altura>7</altura>
+	        <largura>10</largura>
+	        <topo>47</topo>
+	        <esquerda>40</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>false</centragrupo>
+	        	        
+	    </posicao>	
+		
+		<!-- Posição dos números de níveis de 1 a 5 na tela -->
+		
+		<posicao>
+		   	<id>30</id>
+	        <!-- Numero do nível 1 -->
+	        <altura>7</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>10</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>
+		
+		<posicao>
+		   	<id>32</id>
+	        <!-- Numero do nível 2 -->
+	        <altura>7</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>11</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+
+		<posicao>
+		   	<id>34</id>
+	        <!-- Numero do nível 3 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>12</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+		
+		<posicao>
+		   	<id>36</id>
+	        <!-- Numero do nível 4 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>13</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+
+		<posicao>
+		   	<id>38</id>
+	        <!-- Numero do nível 5 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>14</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>				
+		
+		<!-- Posição dos números de níveis de 6 a 10 na tela -->
+		
+		<posicao>
+		   	<id>40</id>
+	        <!-- Numero do nível 6 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>15</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>
+		
+		<posicao>
+		   	<id>42</id>
+	        <!-- Numero do nível 7 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>16</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+
+		<posicao>
+		   	<id>44</id>
+	        <!-- Numero do nível 8 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>17</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+		
+		<posicao>
+		   	<id>46</id>
+	        <!-- Numero do nível 9 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>18</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+
+		<posicao>
+		   	<id>48</id>
+	        <!-- Numero do nível 10 -->
+	        <altura>7</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>19</container>
+	        <fracaoTopo>0.001</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>1</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+		
+		<!-- Cadeados dos níveis não jogados 1 a 5 -->
+		
+		<posicao>
+		   	<id>90</id>
+	        <!-- cadeado do nível 1 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>10</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>		
+		<posicao>
+		   	<id>91</id>
+	        <!-- cadeado do nível 2 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>11</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>		
+		<posicao>
+		   	<id>92</id>
+	        <!-- cadeado do nível 3 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>12</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+		<posicao>
+		   	<id>93</id>
+	        <!-- cadeado do nível 4 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>13</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>														
+   		<posicao>
+		   	<id>94</id>
+	        <!-- cadeado do nível 5 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>14</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+		
+   		<!-- cadeados de 6 a 10 -->
+   		
+		<posicao>
+		   	<id>95</id>
+	        <!-- cadeado do nível 6 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>15</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>		
+		<posicao>
+		   	<id>96</id>
+	        <!-- cadeado do nível 7 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>16</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>		
+		<posicao>
+		   	<id>97</id>
+	        <!-- cadeado do nível 8 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>17</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+		<posicao>
+		   	<id>98</id>
+	        <!-- cadeado do nível 9 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>18</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>														
+   		<posicao>
+		   	<id>99</id>
+	        <!-- cadeado do nível 10 -->
+	        <altura>5</altura>
+	        <largura>5</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>19</container>
+	        <fracaoTopo>0.50</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>0</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>   		
+	
+	   	<!-- Posições dos tempos dos níveis -->
+	   	<!-- Níveis de 1 a 5 -->
+   			    	    	    
+   		<posicao>
+		   	<id>110</id>
+	        <!-- tempo do nível 1 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>10</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>
+   		<posicao>
+		   	<id>115</id>
+	        <!-- tempo do nível 2 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>11</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>
+   		<posicao>
+		   	<id>120</id>
+	        <!-- tempo do nível 3 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>12</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>
+   		<posicao>
+		   	<id>125</id>
+	        <!-- tempo do nível 4 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>13</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>								
+	   		<posicao>
+		   	<id>130</id>
+	        <!-- tempo do nível 5 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>14</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>	
+   		<posicao>
+		   	<id>135</id>
+	        <!-- tempo do nível 6 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>15</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>		
+   		<posicao>
+		   	<id>140</id>
+	        <!-- tempo do nível 7 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>16</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>
+   		<posicao>
+		   	<id>145</id>
+	        <!-- tempo do nível 8 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>17</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>		
+   		<posicao>
+		   	<id>150</id>
+	        <!-- tempo do nível 9 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>18</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>		
+   		<posicao>
+		   	<id>155</id>
+	        <!-- tempo do nível 10 -->
+	        <altura>5</altura>
+	        <largura>3</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>19</container>
+	        <fracaoTopo>0.51</fracaoTopo>
+	        <fracaoEsquerda>0.01</fracaoEsquerda>
+	        <repetirhorizontal>4</repetirhorizontal>
+	        <repetirgrupovertical>0</repetirgrupovertical>
+	        <centragrupo>true</centragrupo>
+	        <espaco>0.0</espaco>
+		</posicao>									
+   			    	    	    
+	</posicoes>
+    <texturas>
+	    <textura>
+	        <id>1</id>
+	        <ascii>0</ascii>
+	        <imagem>brazaoouro.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>
+	    <textura>
+	        <id>2</id>
+	        <ascii>0</ascii>
+	        <imagem>brazaoprata.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo>0</arquivomodelo>
+	        <arquivotela>0</arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>	    
+	    <textura>
+	        <id>3</id>
+	        <ascii>0</ascii>
+	        <imagem>brazaobronze.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo>0</arquivomodelo>
+	        <arquivotela>0</arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>	
+
+	   <textura>
+	        <id>4</id>
+	        <ascii>0</ascii>
+	        <imagem>brazaonormal.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo>0</arquivomodelo>
+	        <arquivotela>0</arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>	     
+	    
+	   <textura>
+	        <id>5</id>
+	        <ascii>0</ascii>
+	        <imagem>cadeado.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo>0</arquivomodelo>
+	        <arquivotela>0</arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>	   
+
+    
+
+	    
+	   	<textura>
+	        <id>8</id>
+	        <ascii>0</ascii>
+	        <imagem>btnhelp.png</imagem>
+	        <visivel>true</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>8</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>	        
+	    </textura>	
+	    
+	    <textura>
+	        <id>9</id>
+	        <ascii>0</ascii>
+	        <imagem>fundomsg.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>2</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela>0</exibirtela>	        
+	    </textura>	 	      
+
+	    <!-- ***************  Números  **************** -->
+	    
+       <textura>
+	        <id>59</id>
+	        <ascii>48</ascii>
+	        <imagem>zero.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        
+	    </textura>
+	    <textura>
+	        <id>60</id>
+	        <ascii>49</ascii>
+	        <imagem>um.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        
+	    </textura>
+	    <textura>
+	        <id>61</id>
+	        <ascii>50</ascii>
+	        <imagem>dois.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>62</id>
+	        <ascii>51</ascii>
+	        <imagem>tres.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>63</id>
+	        <ascii>52</ascii>
+	        <imagem>quatro.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>64</id>
+	        <ascii>53</ascii>
+	        <imagem>cinco.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>65</id>
+	        <ascii>54</ascii>
+	        <imagem>seis.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>66</id>
+	        <ascii>55</ascii>
+	        <imagem>sete.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>67</id>
+	        <ascii>56</ascii>
+	        <imagem>oito.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>68</id>
+	        <ascii>57</ascii>
+	        <imagem>nove.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+
+	    <textura>
+	        <id>69</id>
+	        <ascii>58</ascii>
+	        <imagem>doispontos.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    
+		<!-- Botões e outras imagens -->
+		
+			    <textura>
+	        <id>80</id>
+	        <ascii>0</ascii>
+	        <imagem>carregando.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>	        
+	    </textura>	    
+
+	    
+	   	<textura>
+	        <id>85</id>
+	        <ascii>0</ascii>
+	        <imagem>btnhelp.png</imagem>
+	        <visivel>true</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>8</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>	        
+	    </textura>		    	    
+	   	
+	   	<textura>
+	        <id>87</id>
+	        <ascii>0</ascii>
+	        <imagem>proximo.png</imagem>
+	        <visivel>true</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>	        
+	    </textura>	    
+	   	<textura>
+	        <id>89</id>
+	        <ascii>0</ascii>
+	        <imagem>anterior.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>	        
+	    </textura>	    
+	    
+
+	   	
+	   		    	    	    
+	</texturas>
+</mapaTela>

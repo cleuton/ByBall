@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/*
+ * Parte do livro "Manual do Indie Gamer", de Cleuton Sampaio, 
+ * doravante denominado "O Autor".
+ * Este codigo é distribuído sob a licença Apache 2.0, cujo texto pode ser lido em:
+ * 
+ * http://www.apache.org/licenses/LICENSE-2.0.html
+ * 
+ * Se você for utilizar este código em seus produtos, por favor mencione a autoria
+ * original, citando o livro e o nome do Autor.
+ * 
+ * O código  é disponibilizado "AS IS", e não há nenhum compromisso de suporte ou
+ * garantia por parte do Autor.
+ * 
+ */
+ -->
+ <!-- 
+ 
+ Este arquivo serve para carregar texturas livres, que não são associadas a objetos do Box2D.
+ As coordenadas e tamanhos devem ser informados percentuais da diagonal da tela.
+ 
+ As posições são espaços criados na tela, para os quais serão calculados VOBs de vértices.
+ As texturas são as imagens, que serão carregadas nas possíveis posições, tanto automaticamente como
+ programaticamente.
+ 
+ A propriedade "clicavel" das texturas indica que deverá ser rastreado o clique do mouse sobre elas.
+ 
+  -->
+<mapaTela>
+    <posicoes>
+
+        	    <posicao>
+	        <id>1</id>
+	        <!-- Espaço para o rótulo de tempo -->
+	        <!-- 
+	        <altura>10</altura>
+	        <largura>30</largura>
+	         -->
+	        <altura>8</altura>
+	        <largura>28</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	    </posicao>
+	    <posicao>
+	        <id>2</id>
+	        <!-- Espaço para a o primeiro algarismo das horas -->
+	        <!-- 
+	        <altura>10</altura>
+	        <largura>6</largura>
+	         -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <!-- <esquerda>30</esquerda>  -->
+	        <esquerda>28</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    <posicao>
+	        <id>3</id>
+	        <!-- Espaço para a o segundo algarismo das horas -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <!-- 
+	        <esquerda>36</esquerda>
+	        -->
+	        <esquerda>32</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    <posicao>
+	        <id>4</id>
+	        <!-- Espaço para dois pontos -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <!-- 
+	        <esquerda>42</esquerda>
+	         -->
+	         <esquerda>36</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    <posicao>
+	        <id>5</id>
+	        <!-- Espaço para a o primeiro algarismo dos minutos -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <!--
+	        <esquerda>48</esquerda>
+	        -->
+	        <esquerda>40</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    <posicao>
+	        <id>6</id>
+	        <!-- Espaço para a o segundo algarismo dos minutos -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <!--
+	        <esquerda>54</esquerda>
+	        -->
+	        <esquerda>44</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    <posicao>
+	        <id>7</id>
+	        <!-- Espaço para dois pontos -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <!--
+	        <esquerda>60</esquerda>
+	        -->
+	        <esquerda>48</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    <posicao>
+	        <id>8</id>
+	        <!-- Espaço para a o primeiro algarismo dos segundos -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>52</esquerda>
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	        
+	    </posicao>
+	    <posicao>
+	        <id>9</id>
+	        <!-- Espaço para a o segundo algarismo dos segundos -->
+	        <altura>8</altura>
+	        <largura>4</largura>
+	        <topo>0</topo>
+	        <esquerda>56</esquerda>	  
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal>  
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        
+	    </posicao>    
+	    <posicao>
+	        <id>10</id>
+	        <!-- botão SAIR -->
+	        <altura>8</altura>
+	        <largura>16</largura>
+	        <topo>0</topo>
+	        <esquerda>60</esquerda>	
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal> 
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	               
+	    </posicao>
+        
+	    <posicao>
+	        <id>11</id>
+	        <!-- Aviso -->
+	        <altura>40</altura>
+	        <largura>40</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>	
+	        <centralizarvertical>true</centralizarvertical>
+	        <centralizarhorizontal>true</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	                
+	    </posicao>	 
+	    
+  <!-- Versão 1.5: número do nível -->
+	    
+	    <posicao>
+	        <id>12</id>
+	        <!-- número do nivel -->
+	        <altura>4</altura>
+	        <largura>4</largura>
+	        <topo>10</topo>
+	        <esquerda>2</esquerda>	
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal> 
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	               
+	    </posicao>	    
+	    
+	    <posicao>
+	        <id>13</id>
+	        <!-- icone ordem nível -->
+	        <altura>8</altura>
+	        <largura>24</largura>
+	        <topo>19</topo>
+	        <esquerda>2</esquerda>	
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>false</centralizarhorizontal> 
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	        	               
+	    </posicao>
+	    
+	    
+	    <!-- Posicoes adicionadas na versao 1.5 -->
+	    
+	   	<posicao>
+	        <id>30</id>
+	        <!-- Posicao central para somente replay -->
+	        <altura>8</altura>
+	        <largura>16</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>	
+	        <centralizarvertical>true</centralizarvertical>
+	        <centralizarhorizontal>true</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	    </posicao>
+	    
+	   	<posicao>
+	        <id>31</id>
+	        <!-- Posicao central para replay com next -->
+	        <altura>8</altura>
+	        <largura>16</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>	
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>true</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0.40</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	    </posicao>	  
+	    
+	    <posicao>
+	        <id>32</id>
+	        <!-- Posicao centra para next -->
+	        <altura>8</altura>
+	        <largura>16</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>	
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>true</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0.60</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	    </posicao>		    
+ 
+<!-- ***** Compartilhar ***** -->	    	   		  
+	    <posicao>
+	        <id>35</id>
+	        <!-- Posicao centra para compartilhar -->
+	        <altura>6</altura>
+	        <largura>24</largura>
+	        <topo>0</topo>
+	        <esquerda>0</esquerda>	
+	        <centralizarvertical>false</centralizarvertical>
+	        <centralizarhorizontal>true</centralizarhorizontal>
+	        <container>0</container>
+	        <fracaoTopo>0.8</fracaoTopo>
+	        <fracaoEsquerda>0</fracaoEsquerda>
+	    </posicao>	    
+	</posicoes>
+    <texturas>
+        
+	    <textura>
+	        <id>1</id>
+	        <ascii>0</ascii>
+	        <imagem>tempolabel.png</imagem>
+	        <visivel>true</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>1</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>
+        <textura>
+	        <id>2</id>
+	        <ascii>48</ascii>
+	        <imagem>zero.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        
+	    </textura>
+	    <textura>
+	        <id>3</id>
+	        <ascii>49</ascii>
+	        <imagem>um.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	        <!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        
+	    </textura>
+	    <textura>
+	        <id>4</id>
+	        <ascii>50</ascii>
+	        <imagem>dois.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>5</id>
+	        <ascii>51</ascii>
+	        <imagem>tres.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>6</id>
+	        <ascii>52</ascii>
+	        <imagem>quatro.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>7</id>
+	        <ascii>53</ascii>
+	        <imagem>cinco.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>8</id>
+	        <ascii>54</ascii>
+	        <imagem>seis.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>9</id>
+	        <ascii>55</ascii>
+	        <imagem>sete.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>10</id>
+	        <ascii>56</ascii>
+	        <imagem>oito.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>11</id>
+	        <ascii>57</ascii>
+	        <imagem>nove.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>12</id>
+	        <ascii>58</ascii>
+	        <imagem>doispontos.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>13</id>
+	        <ascii>0</ascii>
+	        <imagem>sair.png</imagem>
+	        <visivel>true</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>10</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>1</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo>inicio.xml</arquivomodelo>
+	        <arquivotela>telainicial.xml</arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>	  
+	    <textura>
+	        <id>14</id>
+	        <ascii>0</ascii>
+	        <imagem>avisochao.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>
+	    <textura>
+	        <id>15</id>
+	        <ascii>0</ascii>
+	        <imagem>tempo.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>	
+	    <textura>
+	        <id>16</id>
+	        <ascii>0</ascii>
+	        <imagem>premio.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>	
+	    <textura>
+	        <id>17</id>
+	        <ascii>0</ascii>
+	        <imagem>ordemerrada.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>	   
+	    
+	    <textura>
+	        <id>20</id>
+	        <ascii>0</ascii>
+	        <imagem>sairdestaque.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>1</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo>inicio.xml</arquivomodelo>
+	        <arquivotela>telainicial.xml</arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>	
+	    
+	    <textura>
+	        <id>30</id>
+	        <ascii>0</ascii>
+	        <imagem>ordemnivel19.png</imagem>
+	        <visivel>true</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>13</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>	   
+	    
+	    <!-- Versão 1.5: Número do nível -->
+	    
+	    <textura>
+	        <id>32</id>
+	        <ascii>0</ascii>
+	        <imagem>lnivel20.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>false</clicavel>
+	        <posicaoFixa>12</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>		    
+	    
+	    <textura>
+	        <id>60</id>
+	        <ascii>0</ascii>
+	        <imagem>replay.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>1</tipoacao>
+	        <novonivel>-99</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	        	        
+	    </textura>	    
+	    
+	    <!-- Texturas da versão 1.5 -->
+	    	    
+		<textura>
+			<!-- Botão "REPLAY" -->		    
+	        <id>65</id>
+	        <ascii>0</ascii>
+	        <imagem>btnreplay.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>1</tipoacao>
+	        <novonivel>-99</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>
+	    
+		<textura>
+		    <!-- Botão "NEXT" -->
+	        <id>68</id>
+	        <ascii>0</ascii>
+	        <imagem>btnnext.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>1</tipoacao>
+	        <novonivel>21</novonivel>
+	        <arquivomodelo>modelonivel21.xml</arquivomodelo>
+	        <arquivotela>tela21.xml</arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>
+		
+<!-- ***** Compartilhar ***** -->			
+		<textura>
+		    <!-- Botão "Compartilhar" -->
+	        <id>70</id>
+	        <ascii>0</ascii>
+	        <imagem>compartilhar.png</imagem>
+	        <visivel>false</visivel>
+	        <clicavel>true</clicavel>
+	        <posicaoFixa>0</posicaoFixa>
+	      	<!-- Tipo ação: 0 - manual; 1 - carregar nível, 2 - exibir tela -->
+	        <tipoacao>0</tipoacao>
+	        <novonivel>0</novonivel>
+	        <arquivomodelo></arquivomodelo>
+	        <arquivotela></arquivotela>
+	        <exibirtela></exibirtela>
+	    </textura>	    	    	    		          
+    </texturas>
+</mapaTela>
